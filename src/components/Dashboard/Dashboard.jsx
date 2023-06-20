@@ -15,11 +15,7 @@ const Dashboard = () => {
         <Sidebar />
         <Navbar />
         <Divider type="" style={{ backgroundColor: "#DBDBDB" }} />
-        <Divider
-          type="vertical"
-          className="vertical-divider"
-          style={{ height: "100%" }}
-        />
+       
       </div>
       <MainFeed />
     </>
