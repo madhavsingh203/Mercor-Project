@@ -8,13 +8,16 @@ import { ReactComponent as TopMenuIcon } from "../../Assets/Icons/topMenu.svg";
 import { ReactComponent as HideIcon } from "../../Assets/Icons/hide.svg";
 import { ReactComponent as BulbIcon } from "../../Assets/Icons/bulb.svg";
 import { ReactComponent as LightIcon } from "../../Assets/Icons/light.svg";
-import Toolbar from "@mui/material/Toolbar";
-import AppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
+
 import "./Sidebar.css";
 import { useState } from "react";
+import { Input } from "antd";
 const Sidebar = () => {
-  const drawerWidth = 240;
+  const [showNavbar, setShowNavbar] = useState(true)
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
   const SidebarMenu = [
     {
       key: "1",
@@ -51,24 +54,23 @@ const Sidebar = () => {
     }
   ];
 
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+ 
 
   return (
     <>
-      <div className="sidebar-container">
+
+      <div  className="sidebar-container">
         <div className="sidebar-top-main">
           <div className="sidebar-top">
             <TopMenuIcon />
-            <h3 style={{ marginLeft: "9px" }}>Project M.</h3>
+            <h3  style={{ marginLeft: "9px" }}>Project M.</h3>
           </div>
-          <div>
+          <div >
             <HideIcon style={{ marginRight: "0px" }} />
           </div>
+         
         </div>
+        <div >
         <div className="sidebar-row-container">
           {SidebarMenu.map((menuItem) => (
             <div key={menuItem.key} className="sidebar-row">
@@ -86,30 +88,61 @@ const Sidebar = () => {
           {sidebarProjects.map((project) => (
             <div
               key={project.key}
-              className={`my-projects`}
+              className={`my-projects `}
               style={{
-                backgroundColor: `${project.key === "1" ? "#5030E514" : ""}`
+                backgroundColor: `${project.key === "1" ? "#5030E514" : "#fff"}`,
+                borderRadius:'10px',
+                paddingLeft:'0px',
+                
               }}
             >
-              <div
-                className="project-indicator"
-                style={{ backgroundColor: project.color }}
-              ></div>
+              
               <button
                 className={
-                  project.key == "1" ? " projects-first-button" : "projects-btn"
+                  `${project.key === "1" ? "projects-first-button" : "projects-btn"}`
+
                 }
-                style={{}}
+                style={{
+                backgroundColor: `${project.key === "1" ? "#5030E514" : ""}`,
+                borderRadius:'8px',
+                display:'flex',
+                alignItems:'center'
+              }}
               >
+                <div
+                className="project-indicator"
+                style={{ backgroundColor: project.color, 
+                marginBottom:`${project.key === "1" ? "20px" : "10px"}`,
+                marginLeft:'10px'
+             
+              }}
+              ></div>
+              <div style={{
+                marginLeft:'16px'
+              }}>
+
                 {project.label}
+              </div>
               </button>
             </div>
           ))}
         </div>
         <div className="thoughts">
-          <LightIcon />
-          <BulbIcon />
-          <ThoughtsIcon />
+          <LightIcon className="light"/>
+          <BulbIcon className="bulb"/>
+          <ThoughtsIcon className="thought"/>
+          <div className="thoughts_content_container">
+          <h4>Thoughts Time</h4>
+          <p>We don’t have any notice for you, till then you can share your thoughts with your peers.</p>
+          <Input style={{
+            width:'166px',
+            borderRadius:'5px',
+            padding:'12px 27px 12px 27px'
+          }} 
+          placeholder="Write a message"
+          />
+          </div>
+        </div>
         </div>
       </div>
     </>

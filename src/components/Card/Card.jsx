@@ -70,9 +70,9 @@ const Card = (props) => {
           <p className="card_content">{props.desc}</p>
         </div>
         <div className="card_bottom">
-          <Avatar.Group>
+       
             <Avatar src={props.avatarPath} />
-          </Avatar.Group>
+          
           <div className="card_bottom_right card_bottom">
             <div className="card_comment">
               <CommentIcon

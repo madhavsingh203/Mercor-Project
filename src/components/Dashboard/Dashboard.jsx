@@ -6,10 +6,12 @@ import MainFeed from "../MainFeed/MainFeed";
 import Board from "../Board/Board";
 import { Layout, Menu } from "antd";
 const Dashboard = () => {
-  const { Sider } = Layout;
+
+  
   return (
     <>
       <div className="top-bar">
+
         <Sidebar />
         <Navbar />
         <Divider type="" style={{ backgroundColor: "#DBDBDB" }} />

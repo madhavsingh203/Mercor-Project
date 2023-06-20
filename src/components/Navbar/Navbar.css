@@ -1,47 +1,57 @@
-#input_container {
+.container{
+  
+  margin: 0 ;
+  /* padding: 0 15px; */
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  height: 100%;
+  width: 100%;
+  
+}
+
+.navbar {
+  height: 60px;
+  background-color: #fffefc;
   position: relative;
-  padding: 0;
-  margin: 10px;
-  width: 100px;
-}
-#input {
-  border-width: 0px;
-  border-radius: 5px;
-  width: 400px;
-  height: 40px;
-  margin: 0;
-  padding-left: 50px;
-  background-color: #f5f5f5;
-  font-weight: 400;
-  font-size: 14px;
+  margin-left: 266px;
+  padding: 32px;
+ margin-top: 0px;
+ padding-top: 10px;
+ padding-left: 0px;
+ z-index: 1;
+  
 }
 
-#input_img {
-  position: absolute;
-  top: 8px;
-  margin-left: 10px;
-  z-index: 1;
-}
-.top-menu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 8px;
-  width: 250px;
-}
-.container {
-  display: flex;
-  justify-content: flex-start;
+.menu-icon {
+  display: none;
+ 
 }
 
-.navbar-icon {
-  margin: 10px;
-}
 
-.navbar-flex {
+
+.nav-elements ul {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
   align-items: center;
+}
+
+
+
+.navbar-icon{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.navbar-list-container{
+  /* display: flex; */
+  margin-top: 0px !important
+}
+.input_container{
+width: 420px;
+padding: 0px;
 }
 
 .username {
@@ -59,7 +69,110 @@
   font-weight: 400;
   text-align: right;
 }
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
 
-.down-arrow {
-  margin: 10px;
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.mobile-logo{
+  display: none !important;
+
+}
+
+
+@keyframes mymove {
+  50% {transform: rotate(180deg);}
+}
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+
+  }
+  
+}
+
+@media (width <= 1116px) {
+  
+.navbar{
+  margin: 0px;
+  width: 100%;
+}
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .input_container{
+    width: 20px;
+    z-index: 1;
+  }
+  .input{
+    width: 20px;
+  }
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #ffffff;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+  .nav-elements.active {
+    width: 270px;
+    border-left: 1px solid black;
+    
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+  .input-img{
+   top:40px;
+   display: none;
+   }
+  .input{
+    width:130px !important;
+    right: 50px;
+    padding: 5px !important;
+  }
+
+  .mobile-logo{
+    display: block !important;
+    display: flex !important;
+  }
+  .user-grp{
+    width: 100px !important;
+  }
+  .four-dot{
+    display: none;
+  }
+  
 }

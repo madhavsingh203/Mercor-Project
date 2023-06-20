@@ -6,6 +6,8 @@
   margin-top: 40px;
   height: 100vh;
   right: 58px;
+  margin-bottom: 10px;
+  
 }
 
 .heading {
@@ -76,3 +78,44 @@
   height: 100%;
   float: left;
 }
+
+.btn-div-right-container{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1050px){
+.mobile-heading{
+  font-size: 25px;
+}
+.container-main-feed {
+  position: absolute;
+  left: 20px;
+  font-size: 46px;
+  font-weight: 500;
+  margin-top: 20px;
+  height: 100vh;
+  right: 58px;
+  
+}
+}
+
+
+@media (max-width: 880px){
+  .mobile-heading{
+    font-size: 15px;
+  }
+  .main-feed-btn{
+    width: 80px;
+  }
+ .btn-div-right-container{
+  width: 90%px;
+ }
+ .containermain-feed-{
+left: 10px;
+margin-top: 10px;
+ }
+ .btn-div-container{
+  width: 90%;
+  padding-right: 10px !important;
+ }
+  }

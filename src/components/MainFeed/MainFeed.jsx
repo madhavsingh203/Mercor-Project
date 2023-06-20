@@ -12,7 +12,7 @@ import { ReactComponent as FourDot } from "../../Assets/Icons/MainFeed/fourDot.s
 import Board from "../Board/Board";
 import { useState } from "react";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import boardsData from "../mockData/";
+import boardsData from "../mockData";
 import Grid from "@mui/material/Grid";
 
 const MainFeed = () => {
@@ -76,7 +76,7 @@ const MainFeed = () => {
           <div className="invite-section-container">
             <button>+</button>
             <p>Invite</p>
-            <UserGroup />
+            <UserGroup className="user-grp"/>
           </div>
         </div>
         {/*Going for the stuff below Mobile App heading  */}
@@ -93,6 +93,7 @@ const MainFeed = () => {
               <DownArrowIcon />
             </button>
           </div>
+          <div className="btn-div-right-container">
           <div className="btn-div-right">
             <ShareIcon />
             <div
@@ -107,8 +108,10 @@ const MainFeed = () => {
                 marginRight: "22px"
               }}
             />
-            <FourDot />
+            <FourDot className="four-dot"/>
           </div>
+          </div>
+       
         </div>
         <Grid container>
           <div>
