@@ -1,0 +1,13 @@
+.chip {
+  border-radius: 8px;
+  width: fit-content;
+  padding: 4px 6px;
+}
+.chip_content {
+  /* color: #d58d49; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0px;
+}
