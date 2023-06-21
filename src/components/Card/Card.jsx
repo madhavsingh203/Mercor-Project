@@ -25,7 +25,7 @@ const Card = (props) => {
     setIsModalOpen(false);
   };
 
-  console.log(props.avatarPath);
+  // console.log(props.avatarPath);
   return (
     <>
       {isModalOpen ? (

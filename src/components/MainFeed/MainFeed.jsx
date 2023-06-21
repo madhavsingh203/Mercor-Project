@@ -43,7 +43,7 @@ const MainFeed = () => {
       data[sourceBoardIndex].cardData = sourceCard;
       data[destinationBoardIndex].cardData = destinationCard;
 
-      console.log(data);
+      
       setData(data);
     }
   };
