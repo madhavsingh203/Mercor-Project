@@ -112,7 +112,7 @@ const Sidebar = () => {
                 <div
                 className="project-indicator"
                 style={{ backgroundColor: project.color, 
-                marginBottom:`${project.key === "1" ? "20px" : "10px"}`,
+                marginBottom:`${project.key === "1" ? "10px" : "10px"}`,
                 marginLeft:'10px'
              
               }}
