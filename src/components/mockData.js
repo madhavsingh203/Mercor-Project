@@ -16,7 +16,7 @@ const boardsData = [
         desc:
           "Brainstorming brings team members' diverse experience into play. ",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "12",
         fileCount: "0"
       },
@@ -29,7 +29,7 @@ const boardsData = [
         desc:
           "Brainstorming brings team members' diverse experience into play. ",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "12",
         fileCount: "0"
       },
@@ -42,7 +42,7 @@ const boardsData = [
         desc:
           "Brainstorming brings team members' diverse experience into play. ",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "12",
         fileCount: "0"
       }
@@ -63,7 +63,7 @@ const boardsData = [
         title: "Research 1",
         desc: "User research helps you to create an optimal product for users.",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "10",
         fileCount: "3"
       },
@@ -75,7 +75,7 @@ const boardsData = [
         title: "Research 2",
         desc: "User research helps you to create an optimal product for users.",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "10",
         fileCount: "3"
       }
@@ -95,7 +95,7 @@ const boardsData = [
         title: "Design System",
         desc: "It just needs to adapt the UI from what you did before  ",
         cardImgPath: "",
-        avatarPath: "",
+        avatarPath: "../../Assets/Card/user1.png",
         commentCount: "12",
         fileCount: "15"
       }
